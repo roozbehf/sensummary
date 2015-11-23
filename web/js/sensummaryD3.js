@@ -1,27 +1,24 @@
+//   PoC of an D3 View for a Sens Summary Dashboard
+//   (as an AngularJS directive)
+//
+//   (c) 2015 Roozbeh Farahbod
+//   Thanks to Gregory Hilkert (http://blog.ideahaven.co) for his good tutorial on D3 and AngularJS
+
 app.directive('sensuNodes', ['$window', '$timeout',
   function($window, $timeout) {
     return {
       restrict: 'E',
       scope: {
         data: '=',
+        senserver: '=',
         label: '@',
         onClick: '&'
       },
       link: function(scope, ele, attrs) {
-          var renderTimeout;
-
-          var bubbleRadius = 30,
-              defaultWidth = 1.7 * Math.sqrt(bubbleRadius * bubbleRadius * scope.data.nodes.length),
-              defaultHeight = defaultWidth;
-
-          var width = parseInt(attrs.width) || defaultWidth,
-              height = parseInt(attrs.height) || defaultHeight;
-
-          var svg = d3.select(ele[0])
-            .append('svg')
-            .attr("width", "100%")
-            .attr("height", "100%")
-            .attr("class", "bubble");
+          var svg,
+            bubbleRadius = 30,
+            defaultWidth, defaultHeight,
+            width, height;
 
           $window.onresize = function() {
             scope.$apply();
@@ -38,9 +35,23 @@ app.directive('sensuNodes', ['$window', '$timeout',
           }, true);
 
           scope.render = function(data) {
-            svg.selectAll('*').remove();
-
             if (!data) return;
+
+            if (!svg) {
+              defaultWidth = 1.7 * Math.sqrt(bubbleRadius * bubbleRadius * scope.data.nodes.length);
+              defaultHeight = defaultWidth;
+
+              width = defaultWidth;
+              height = defaultHeight;
+
+              svg = d3.select(ele[0])
+                .append('svg')
+                .attr("width", "100%")
+                .attr("height", "100%")
+                .attr("class", "bubble");
+            }
+
+            svg.selectAll('*').remove();
 
             var force = d3.layout.force()
               .nodes(d3.values(data.nodes))

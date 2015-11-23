@@ -1,0 +1,105 @@
+[{
+  "check": "load_metrics",
+  "history": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "last_execution": 1448241350,
+  "last_status": 0,
+  "last_result": {
+    "type": "metric",
+    "command": "/etc/sensu/plugins/load-metrics.rb",
+    "interval": 60,
+    "subscribers": ["all"],
+    "handlers": ["relay"],
+    "name": "load_metrics",
+    "issued": 1448241350,
+    "executed": 1448241350,
+    "duration": 0.145,
+    "output": "t-mli-client-01.load_avg.one 0.02 1448241350\nt-mli-client-01.load_avg.five 0.02 1448241350\nt-mli-client-01.load_avg.fifteen 0.05 1448241350\n\n",
+    "status": 0
+  }
+}, {
+  "check": "keepalive",
+  "history": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+  "last_execution": 1448283964,
+  "last_status": 2,
+  "last_result": {
+    "thresholds": {
+      "warning": 120,
+      "critical": 180
+    },
+    "name": "keepalive",
+    "issued": 1448283964,
+    "executed": 1448283964,
+    "output": "No keepalive sent from client for 42602 seconds (>=180)",
+    "status": 2
+  }
+}, {
+  "check": "cpu_metrics",
+  "history": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "last_execution": 1448241329,
+  "last_status": 0,
+  "last_result": {
+    "type": "metric",
+    "command": "/etc/sensu/plugins/cpu-metrics.rb",
+    "interval": 60,
+    "subscribers": ["all"],
+    "handlers": ["relay"],
+    "name": "cpu_metrics",
+    "issued": 1448241329,
+    "executed": 1448241329,
+    "duration": 0.156,
+    "output": "t-mli-client-01.cpu.total.user 34156 1448241329\nt-mli-client-01.cpu.total.nice 470 1448241329\nt-mli-client-01.cpu.total.system 7569 1448241329\nt-mli-client-01.cpu.total.idle 5789323 1448241329\nt-mli-client-01.cpu.total.iowait 394 1448241329\nt-mli-client-01.",
+    "status": 0
+  }
+}, {
+  "check": "memory",
+  "history": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "last_execution": 1448241375,
+  "last_status": 0,
+  "last_result": {
+    "command": "/etc/sensu/plugins/check-mem.sh -w 128 -c 64",
+    "interval": 10,
+    "subscribers": ["devops", "all"],
+    "name": "memory",
+    "issued": 1448241375,
+    "executed": 1448241375,
+    "duration": 0.011,
+    "output": "MEM OK - free system memory: 1881 MB\n",
+    "status": 0
+  }
+}, {
+  "check": "cpu_usage_metrics",
+  "history": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "last_execution": 1448241358,
+  "last_status": 0,
+  "last_result": {
+    "type": "metric",
+    "command": "/etc/sensu/plugins/cpu-usage-metrics.rb",
+    "interval": 60,
+    "subscribers": ["all"],
+    "handlers": ["relay"],
+    "name": "cpu_usage_metrics",
+    "issued": 1448241358,
+    "executed": 1448241358,
+    "duration": 0.151,
+    "output": "t-mli-client-01.disk_usage.root.used 668 1448241358\nt-mli-client-01.disk_usage.root.avail 46893 1448241358\nt-mli-client-01.disk_usage.root.used_percentage 2 1448241358\n\n",
+    "status": 0
+  }
+}, {
+  "check": "disk-capacity-metrics",
+  "history": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "last_execution": 1448241372,
+  "last_status": 0,
+  "last_result": {
+    "type": "metric",
+    "command": "/etc/sensu/plugins/disk-capacity-metrics.rb --flatten",
+    "interval": 60,
+    "subscribers": ["all"],
+    "handlers": ["relay"],
+    "name": "disk-capacity-metrics",
+    "issued": 1448241372,
+    "executed": 1448241372,
+    "duration": 0.153,
+    "output": "t-mli-client-01.disk_usage.root.used 668 1448241372\nt-mli-client-01.disk_usage.root.avail 46893 1448241372\nt-mli-client-01.disk_usage.root.used_percentage 2 1448241372\n\n",
+    "status": 0
+  }
+}]

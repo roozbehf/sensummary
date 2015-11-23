@@ -1,17 +1,28 @@
+<!--
+  PoC of a Sens Summary Dashboard Application
+  Using AngularJS and D3
+
+  (c) 2015 Roozbeh Farahbod
+-->
+
 <html>
-<script src="lib/angular.min.js"></script>
-<script src="lib/d3.v3.min.js"></script>
+  <title>Sensu Summary Dashboard (PoC)</title>
 
-<script src="js/sensummaryApp.js"></script>
-<script src="js/sensummaryD3.js"></script>
-<script src="js/sensummaryCtrl.js"></script>
+  <meta name="description" content="PoC of a Sensu Summary Dashboard">
+  <meta name="keywords" content="sensu,d3,dashboard">
+  <meta name="author" content="Roozbeh Farahbod">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/d3.v3.min.js"></script>
+  <script src="js/sensummaryApp.js"></script>
+  <script src="js/sensummaryD3.js"></script>
 
-<link rel="stylesheet" href="css/sensummary.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/sensummary.css">
 
 <body>
 
@@ -22,9 +33,8 @@
     </div>
 
   <div ng-controller="sensummaryCtrl">
-    <sensu-nodes data="data"></sensu-nodes>
+    <sensu-nodes data="data" ></sensu-nodes>
   </div>
-
   </div>
 
 </body>

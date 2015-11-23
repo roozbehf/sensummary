@@ -1,0 +1,25 @@
+[{
+  "name": "t-mli-server-collector",
+  "address": "139.162.152.72",
+  "subscriptions": ["devops", "all"],
+  "version": "0.20.3",
+  "timestamp": 1448282361
+}, {
+  "name": "t-mli-server-front",
+  "address": "139.162.151.87",
+  "subscriptions": ["devops", "all"],
+  "version": "0.20.3",
+  "timestamp": 1448282369
+}, {
+  "name": "t-mli-client-01",
+  "address": "139.162.145.130",
+  "subscriptions": ["devops", "all"],
+  "version": "0.20.3",
+  "timestamp": 1448241362
+}, {
+  "name": "t-mli-server-storage",
+  "address": "139.162.143.36",
+  "subscriptions": ["devops", "all"],
+  "version": "0.20.3",
+  "timestamp": 1448282367
+}]
