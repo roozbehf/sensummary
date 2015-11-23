@@ -12,8 +12,14 @@
   <meta name="keywords" content="sensu,d3,dashboard">
   <meta name="author" content="Roozbeh Farahbod">
 
+  <!-- libraires -->
   <script src="lib/angular.min.js"></script>
   <script src="lib/d3.v3.min.js"></script>
+
+  <!-- config -->
+  <script src="config/server.js"></script>
+  
+  <!-- code -->
   <script src="js/sensummaryApp.js"></script>
   <script src="js/sensummaryD3.js"></script>
 
@@ -33,7 +39,7 @@
     </div>
 
   <div ng-controller="sensummaryCtrl">
-    <sensu-nodes data="data" ></sensu-nodes>
+    <sensu-nodes data="data"></sensu-nodes>
   </div>
   </div>
 
