@@ -1,0 +1,31 @@
+<html>
+<script src="lib/angular.min.js"></script>
+<script src="lib/d3.v3.min.js"></script>
+
+<script src="js/sensummaryApp.js"></script>
+<script src="js/sensummaryD3.js"></script>
+<script src="js/sensummaryCtrl.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/sensummary.css">
+
+<body>
+
+  <div class="container" ng-app="sensummary">
+    <div class="page-header">
+      <h1>VM Health Dashboard</h1>
+      <h4>Overview of Sensu Health Reports in One Page</h4>
+    </div>
+
+  <div ng-controller="sensummaryCtrl">
+    <sensu-nodes data="data"></sensu-nodes>
+  </div>
+
+  </div>
+
+</body>
+</html>
