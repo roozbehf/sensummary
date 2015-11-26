@@ -9,6 +9,7 @@ app.controller('sensummaryCtrl', ['$scope', '$http', function($scope, $http) {
   };
   $scope.senserver = serverInfo.senserver;
   $scope.uchiwa_url = serverInfo.uchiwa_url;
+  $scope.uchiwa_site_name = serverInfo.uchiwa_site_name;
 
   var notifyDataChange = function() {
     $scope.data = data;
@@ -24,7 +25,7 @@ app.controller('sensummaryCtrl', ['$scope', '$http', function($scope, $http) {
           var node = {
             name: cname,
             status: -1,
-            url: ($scope.uchiwa_url ? ($scope.uchiwa_url + "/" + cname) : null),
+            url: ($scope.uchiwa_url ? ($scope.uchiwa_url.concat("/", $scope.uchiwa_site_name, "/", cname)) : null),
             lastUpdate: "few seconds ago"
           };
           data.nodes.push(node);
