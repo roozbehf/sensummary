@@ -6,6 +6,7 @@ This change log follow the convention proposed by [Kepp a CHANGELOG](http://keep
 
 ## [0.0.1] - 2015-11-26
 ### Added
-- Separate configuration file under `config/server.js` folder
+- Separate Uchiwa URL and site name
+- Separate configuration file under `config/config.js` folder
 - Fetches data from a Sensu servers and presents the results as colored nodes.
 - If an Uchiwa server is configured, double-clicking on each nodes opens the corresponding page on Uchiwa.
